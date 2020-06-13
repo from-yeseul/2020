@@ -1,7 +1,7 @@
 .scroll {
     width: 40px; height: 40px;
     position: fixed; left: 10px; top: 10px; 
-    z-index: 10000;
+    z-index: 10000; opacity:0;
 }
 
 
