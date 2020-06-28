@@ -609,7 +609,7 @@ dialog {animation: appear .8s cubic-bezier(.77,0,.175,1) forwards;
 .site1 .ibox01 .ibox01_wrap img{}
 
 .site1 .ibox01 .pro_con01{
-    width: 55%; height:53%;
+    width: 55%; height:52%;
     position: absolute; top: 13%; left: 25%;
     overflow: hidden; 
     background: red;
@@ -642,7 +642,7 @@ dialog {animation: appear .8s cubic-bezier(.77,0,.175,1) forwards;
 .site2 .ibox02 .ibox02_wrap img{}
 .site2 .ibox02 .pro_con02{
     width: 40%; height:52%;
-    position: absolute; top: 7%; left: 27%;
+    position: absolute; top: 35%; left: 27%;
     overflow: hidden; 
     z-index:-1;
 }
@@ -704,8 +704,8 @@ dialog {animation: appear .8s cubic-bezier(.77,0,.175,1) forwards;
 .site4 .ibox04 .ibox04_wrap{}
 .site4 .ibox04 .ibox04_wrap img{}
 .site4 .ibox04 .pro_con04{
-    width: 49%; height:100%;
-    position: absolute; top: 13%; left: 26%;
+    width: 40%; height:50%;
+    position: absolute; top: 32%; left: 34.8%;
     overflow: hidden; 
     
     z-index: -1;
