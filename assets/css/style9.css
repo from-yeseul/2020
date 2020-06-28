@@ -1,5 +1,5 @@
 html{scroll-behavior: smooth;}
-#contents{overflow: hidden;}
+#contents{overflow: hidden; }
 /*------menu------*/
 .menu{
     width: 50px; height: 50px;
@@ -37,7 +37,7 @@ html{scroll-behavior: smooth;}
     transform: translateX(-50%);
     text-align: center;
 }
-.menu_list ul li{height: 15%; opacity: 0;}
+.menu_list ul li{height: 13%; opacity: 0;}
 .menu_list ul li a{
     color:rgba(255,255,255,0.5);
     font-size: 70px;
@@ -64,7 +64,7 @@ html{scroll-behavior: smooth;}
 
 /*------section------*/
 #section1{
-    height: 200vh;
+
     position: relative;
     background:url(../img/bg1.jpg) no-repeat center center;
     background-size: cover;
@@ -88,9 +88,9 @@ html{scroll-behavior: smooth;}
 }
 #section2{}
 #section3{position: relative;}
-#section4{height: 400vh; position: relative; background: #f4eeeb; color:#9e6240;}
-#section5{height: 150vh; position: relative; background: #e0cdbf;}
-#section6{height: 100vh; position: relative; background: #ccc;}
+#section4{position: relative; background: #f4eeeb; color:#9e6240;}
+#section5{position: relative; background: #e0cdbf;}
+#section6{position: relative; background: #ecded4;}
 #section7{height: 100vh; position: relative; background: #3c584c;}
 
 .container{margin: 0 auto;}
@@ -179,7 +179,7 @@ html{scroll-behavior: smooth;}
 /*---sec2---*/
 .sec2{position: relative; width: 85%; height: 100vh; z-index:1; margin-left: 7.5%;}
 .sec2 .profile{
-    width: 100%; height:75%; 
+    width: 100%; height:75vh; 
     background:rgba(0,0,0,0.3);
     position: absolute; top: 100%; 
     transform: translateY(-50%);
@@ -259,6 +259,7 @@ html{scroll-behavior: smooth;}
     font-weight: 300;
     line-height: 2vw;
     text-transform: uppercase;
+    transition:.5s;
 }
 .sec2 .profile_box2 a:hover{opacity: 1;}
 
@@ -266,7 +267,7 @@ html{scroll-behavior: smooth;}
 /*-----------------------section3----------------------------*/
 /*sec3*/
 .sec3{}
-.sec3 .site{height: 100vh; position: relative;}
+.sec3 .site{position: relative;}
 .sec3 .project_tit{height: 110vh; background: #e0cdbf;}
 .sec3 .project_tit h3{
     font-size: 10vw;
@@ -289,10 +290,6 @@ html{scroll-behavior: smooth;}
 .sec3 .project_tit.show h3{opacity: 1; left:50%; transition:1s; }
 .sec3 .project_tit.show h3::before{opacity: 1; transform:translateY(-2vw); transition:all .5s .5s ease;}
 
-
-
-
-.sec3 .project_site0{height: 30vh;}
 
 /*site공통요소*/
 .sec3 .site_w{
@@ -320,6 +317,13 @@ html{scroll-behavior: smooth;}
 }
 .sec3 .tbox .tbox_table{opacity: 0;}
 .sec3 .tool{width: 50%; color:#111; border-collapse: collapse;}
+.sec3 .tool a{position: relative;}
+.sec3 .tool a::before{
+    content:'';
+    width: 100%; height:15px;
+    background:rgba(196,113,237,0.2);
+    position: absolute; top: 10%; left: 0;
+}
 .sec3 .tool tbody{}
 .sec3 .tool th{border-bottom: 2px solid #ccc; padding:10px;}
 .sec3 .tool tr{}
@@ -366,6 +370,7 @@ html{scroll-behavior: smooth;}
     bottom: 0; right:-40px;
     opacity: 0;
 }
+
 .sec3 .ibox img{}
 .sec3 .ibox_c{z-index: -1; position: absolute; overflow: hidden;}
 .sec3 .ibox_c img{}
@@ -373,7 +378,9 @@ html{scroll-behavior: smooth;}
 
 
 /*site01*/
-.sec3 .ibox01_con{width: 52%; height:auto; top: 12.5%; left: 25.5%;}
+.sec3 .project_site01{margin-top: 10vw;}
+
+.sec3 .ibox01_con{width: 52%; height:auto; top: 11.5%; left: 25.5%;}
 
 .tbox01.show .tbox_num{opacity: 1; transform: translateY(-40px); transition:.5s;}
 .tbox01.show .tbox_tit{opacity: 1; transform: translateY(-40px); transition:.8s;}
@@ -386,16 +393,16 @@ html{scroll-behavior: smooth;}
 
 
 /*site02*/
-.sec3 .tbox02{width: 45%; left: 47%;}
+.sec3 .tbox02{}
+.sec3 .tbox02 ul{ position: absolute; right:0;}
 .sec3 .tbox02 .tbox_num{text-align: right;}
-.sec3 .tbox02 .tbox_tit{text-align: right;}
-.sec3 .tbox02 .tbox_info{width:80%; text-align: right; margin-left: 20%;}
-.sec3 .tbox02 .tool{width: 80%; margin-left: 20%;}
-.sec3 .tbox02 .tbox_btn{left: 20%;}
-.sec3 .ibox02{left: 0;}
+.sec3 .tbox02 .tbox_tit{text-align: right; }
+.sec3 .tbox02 .tbox_info {text-align: right; width: 40%;  margin-left: 60%;}
+.sec3 .tbox02 .tool{ width: 40%;  margin-left: 60%;}
+.sec3 .tbox02 .tbox_btn{position:absolute; top: 105%; left: 60%;}
+.sec3 .ibox02{left:0;}
 
-.sec3 .ibox02_con{width: 41%; height:50%; top: 12.5%; left: 27%;}
-
+.sec3 .ibox02_con{width: 41%; height:50%; top: 29%; left: 27.5%;}
 
 .tbox02.show .tbox_num{opacity:1; transform: translateY(-40px); transition:.5s;}
 .tbox02.show .tbox_tit{opacity:1; transform: translateY(-40px); transition:.8s;}
@@ -408,7 +415,7 @@ html{scroll-behavior: smooth;}
 
 
 /*site03*/
-.sec3 .ibox03_con{width: 40%; height:60%; top: 15%; left: 35%;}
+.sec3 .ibox03_con{width: 40%; height:60%; top: 14.5%; left: 34.8%;}
 
 .tbox03.show .tbox_num{opacity: 1; transform: translateY(-40px); transition:.5s;}
 .tbox03.show .tbox_tit{opacity: 1; transform: translateY(-40px); transition:.8s;}
@@ -419,18 +426,22 @@ html{scroll-behavior: smooth;}
 .ibox03.show .ibox03_con img{transform: translateY(-40px); transition:5s;}
 
 /*site04*/
-.sec3 .tbox04{width: 65%; left:22%;}
+.sec3 .project_site04{margin-bottom: 20vw;}
 
+.sec3 .tbox04{}
+.sec3 .tbox04 ul{ position: absolute; right:0;}
 .sec3 .tbox04 .tbox_num{text-align: right;}
-.sec3 .tbox04 .tbox_tit{text-align: right;}
-.sec3 .tbox04 .tbox_info{width:55%; text-align: right; margin-left: 45%;}
-.sec3 .tbox04 .tool{width: 55%; margin-left: 45%;}
-.sec3 .tbox04 .tbox_btn{left: 45%;}
-.sec3 .ibox04{left: 0;}
+.sec3 .tbox04 .tbox_tit{text-align: right; }
+.sec3 .tbox04 .tbox_info {text-align: right;  width: 40%;  margin-left: 60%;}
+.sec3 .tbox04 .tool{width: 40%;  margin-left: 60%;}
+.sec3 .tbox04 .tbox_btn{position:absolute; top: 105%; left: 60%;}
+.sec3 .ibox04{left:0;}
+
+.sec3 .ibox04_con{width: 40%; height:50%; top: 25%; left: 34.8%;}
 
 
 
-.sec3 .ibox04_con{width: 49%; height:50%; top: 12.5%; left: 26%;}
+
 
 .tbox04.show .tbox_num{opacity:1; transform: translateY(-40px); transition:.5s;}
 .tbox04.show .tbox_tit{opacity:1; transform: translateY(-40px); transition:.8s;}
@@ -441,9 +452,6 @@ html{scroll-behavior: smooth;}
 
 
 
-
-/*site00*/
-.sec3 .project_site00{height: 50vh;}
 
 
 /*-----------------------section4----------------------------*/
@@ -613,26 +621,27 @@ html{scroll-behavior: smooth;}
 
 
 /*-----------------------section5----------------------------*/
-.sec5{width: 100vw; height: 150vh; padding-top: 4vw;}
+.sec5{position: relative;}
 .sec5 h5{
     font-size: 6vw;
     font-family: 'CanvasBlack'; 
     color:#3a1d09;
     text-align: center;
+    line-height:15vw;
     position: relative;
-    margin-bottom:4vw;
 }
 .sec5 h5::before{
     content:'with animation effects created using html, css';
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
     color:rgba(0,0,0,0.6);
-    position: absolute; top: 80%; left: 50%;
+    position: absolute; top:25%; left: 50%;
     transform: translateX(-50%);
 }
 .sec5 .ani_wrap{
-    width: 80vw; height: 60%; 
+    width: 80vw;
     margin-left:10vw;
+    padding-bottom: 5vw;
     display: grid;
     grid-template-columns:repeat(3,25vw);
     grid-template-rows:repeat(2,25vw);
@@ -653,11 +662,11 @@ html{scroll-behavior: smooth;}
     background:rgba(0,0,0,0.5);
     position: absolute; top: 0; left: 0;
     opacity: 0;
-
+    transition:.5s ease;
 }
 .sec5 .ani_wrap .ani:hover::after{
     opacity: 1;
-    transition:.5s ease;
+    
 }
 .sec5 .ani_wrap .ani_txt{
     font-size: 16px; color:#fff; line-height: 2vw;
@@ -705,16 +714,16 @@ html{scroll-behavior: smooth;}
   100%{transform:rotate(180deg); height: 0;}
 }
 /*ani02*/
+.circles{}
 .circle{
-    width: 10px;
-    height: 10px;
+    width: 1vw;
+    height: 1vw;
     background: #fff;
-    margin: 5px 10px;
+    margin: 5px 5px;
     border-radius:50%;
     transform-origin:top center;
     animation: spin 1s linear infinite;
 }
-
 @keyframes spin{
   0%{transform:rotate(0) scale(1.1);}
   50%{transform:rotate(180deg) scale(0.9);}
@@ -924,75 +933,186 @@ html{scroll-behavior: smooth;}
 	}
 }
 
-
-
-
 /*-----------------------section6----------------------------*/
-.sec7{
-    width: 80vw; height: 60vh;
-    position: absolute; top: 55%; left: 50%;
-    transform: translate(-50%,-50%);
-    transition:.5s;
-}
-.sec7 h6{
-    font-size: 6vw; 
+.sec6{width: 100vw;}
+.sec6 h5{
+    font-size: 6vw;
     font-family: 'CanvasBlack'; 
+    color:#3a1d09;
     text-align: center;
-    color:#e0cdbf;
     position: relative;
+    padding-top: 4vw;
     transition:.5s;
 }
-.sec7 h6::after{
-    content:'Let\'s work together.';
+.sec6 h5::before{
+    content:'with games created using js';
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    color:rgba(0,0,0,0.4);
+    position: absolute; top: 90%; left: 50%;
+    transform: translateX(-50%);
+}
+.sec6 .js_wrap{width: 300vw;}
+.sec6 .js_wrap .js_box{
+    position: relative;
+    display: flex;
+    overflow: hidden;
+}
+.sec6 .js_wrap .js_prev{
+    width: 30px;
+    position: absolute; top: 30%; left:85%;
+    transition:.5s;
+    cursor: pointer;
+}
+.sec6 .js_wrap .js_next{
+    width: 30px;
+    position: absolute; top: 30%; left:85%;
+    transform: translateX(50px);
+    transition:.5s;
+    cursor: pointer;
+}
+.sec6 .js_wrap .js_game{
+    width: 100%;
+    display: flex;
+    padding:3%;
+}
+.sec6 .js_wrap .js_game .js_img{width: 50%; height: 100%; position: relative; background: rgba(0,0,0,0.03);}
+.sec6 .js_wrap .js_game .js_txt{width: 50%; height: 100%;}
+.sec6 .js_wrap .js_game .js_txt ul{width: 70%; margin:10%;}
+.sec6 .js_wrap .js_game .js_txt ul li{}
+
+.sec6 .js_wrap .js_game .js_txt .game_tit{
     font-family: 'CanvasRegular';
-    font-size: 2vw;
-    position: absolute; top: 100%; left: 50%;
-    transform: translate(-50%,-50%);
-    transition:.5s;
+    font-size: 60px;
+    line-height: 70px;
+    margin-left: -2%;
 }
-/*form*/
-.mail_box{width: 50%; position: absolute; top: 55%; left: 50%;
-transform: translate(-50%,-50%);}
-#mail_form{
-    width:100%; 
-    opacity: 0; 
-    transition:all 1s ease;
+.sec6 .js_wrap .js_game .js_txt .game_how{
+    font-size: 20px;
+    font-weight: 300;
     position: relative;
 }
-#mail_form.show{opacity: 1;}
-.sec7 #mail{
-    width: 100%; height: 3vw;
-    background: none;
-    border:1px solid #e0cdbf;
-    transition:.5s;
+.sec6 .js_wrap .js_game .js_txt .game_how::after{
+    content:'';
+    width: 20px; height: 2px;
+    background: #000;
+    position:absolute; top:200%; left: 0;
+}
+.sec6 .js_wrap .js_game .js_txt .game_info{
+    font-size: 16px;
+    font-family: 'Chosunilbo_myungjo'; 
+    margin-top: 15%;
+}
+.sec6 .js_wrap .js_game .js_txt .game_code{
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 35px;
+    text-align: center;
+    width: 100px; height:35px;
+    border:.5px solid #000;
+    border-radius: 35px;
     margin-top: 5%;
 }
-.sec7 #message{
-    width: 100%; height: 10vw;
+/*js_todo*/
+.form,
+.greetings{display: none;}
+
+.showing{display: block;}
+        
+.js_clock_wrap{
+    position: absolute;
+    width: 80%;
+    margin-left:10%; margin-top:5%;
+    color:#fff;
+}
+.js_title{font-size: 8vw;}
+.js_form{height:50px;}
+.js_form input{
+    width:100%;
+    background: none;
+    border:none;
+    border-bottom:1px solid #fff;
+    line-height: 30px;
+}
+.js_greetings{font-size: 3vw;}
+.js_todoForm input{
+    background: none;
+    border:none;
+    border-bottom:1px solid #fff;
+}
+.js_todoList{ margin-top: 5%;}
+
+
+
+
+
+
+
+/*-----------------------section7----------------------------*/
+.sec7{padding-top: 20%; transition:.5s;}
+.sec7 .cont_box{width:100%;}
+.sec7 .cont_box p{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-align: center;
+    color:#bfa28c;
+
+}
+.sec7 .cont_box h6{
+    font-size: 70px; 
+    font-family: 'CanvasBlack'; 
+    text-align: center;
+    line-height: 70px;    
+    color:#e0cdbf;
+    transition:.5s;
+    
+}
+.sec7.show{padding-top:15%;}
+
+
+.send_arrow{
+    width: 50px; 
+    position: absolute; top: 55%; left:50%;
+    cursor:pointer;
+    transform:translateX(-50%);
+    transition:.5s;
+    z-index: 10;
+}
+.send_arrow.show{top: 90%; opacity: 0; z-index: -1;}
+
+
+/*form*/
+.mail_box{width: 40%; position: absolute; top: 55%; left: 50%; 
+transform: translate(-50%,-50%); opacity: 0; transition:.5s;}
+.mail_box.show{opacity: 1;}
+.sec7 #mail_form{}
+.sec7 #mail{
+    width: 100%; height:50px;
     background: none;
     border:1px solid #e0cdbf;
-    transition:.5s;
+}
+.sec7 #message{
+    width: 100%; height:150px;
+    background: none;
+    border:1px solid #e0cdbf;
     margin-top: 3%;
 }
 .sec7 #send{
-    width:8vw; height: 5vh;
+    width:150px; height: 50px;
     background: #e0cdbf;
-    color:#3c584c;
     font-weight: 500;
-    border:1px solid #e0cdbf;
     border-radius: 35px;
     position: absolute; left: 50%;
     transform: translateX(-50%);
     cursor: pointer;
     transition:.5s;
-    margin-top: 3%;
+    margin-top: 8%;
 }
 .sec7 #send:hover{
-    width: 10%;
     background:rgba(224,205,191,.3);
     border:1px solid #fff;
     color:#fff;
-    transition: .5s ease;
 }
 input::placeholder,textarea::placeholder {
     font-weight: 300;
@@ -1006,33 +1126,14 @@ input, textarea{
     color:#bfa28c;
 }
 
-.send_arrow{
-    width: 3vw; 
-    position: absolute; top: 50%; left:48%;
-    cursor:pointer;
-    transform: rotate(90deg);
-    transition:all 500ms ease;
-    z-index: 10;
-    
-}
 
 
-
-.send_arrow.show{top: 90%; opacity: 0; z-index: -1;}
 
 
 
 
 /*------------------------------미디어쿼리---------------------------*/
 @media(max-width:1440px){
-    .send_arrow{
-        width: 5vw; 
-        position: absolute; top: 50%; left:46%;
-        cursor:pointer;
-        transform: rotate(90deg);
-        transition:all 500ms ease;
-        z-index: 10;
-    }
 
 }
 @media(max-width:1280px){
@@ -1045,8 +1146,8 @@ input, textarea{
     .sec3 .tbox{position: absolute; width: 100%; height: 100%;}
     .sec3 .tbox ul{position: absolute; top: 10%; left: 4%;}
     .sec3 .tbox02{width: 45%;}
-    
-    .sec7 .mail_box{top: 45%;}
+
+    .js_form input{margin-top: 2vw;}
 }
 @media(max-width:1024px){
     .sec1 .main{
@@ -1084,13 +1185,11 @@ input, textarea{
     .sec3 .project_tit h3{font-size: 14vw;}
     .sec3 .project_tit h3::before{font-size: 2vw; top:-5vw;}
 
-    .sec3 .project_site0{height: 10vh;}
-    .sec3 .project_site00{height: 40vh;}
     /*site*/
     .sec3 .site_w{width: 95%; height: 100vh;}
     .sec3 .tbox ul{
         width: 90%;
-        position: absolute; top:50%; left:50%;
+        position: absolute; top:55%; left:50%;
         transform: translateX(-50%);
         z-index: 1; text-align: center;
     }
@@ -1116,8 +1215,8 @@ input, textarea{
     .sec3 .tbox02 .tbox_info{text-align:left; margin-left:5%;}
     .sec3 .tbox02 .tool{width: 100%; margin-left:0;}
 
-    .sec3 .ibox02{width: 90%; top: 4%; left: 0;}
-    .sec3 .ibox02_con{height:25%; top: 4%;}
+    .sec3 .ibox02{width: 90%; top: -7%; left: 0;}
+    .sec3 .ibox02_con{height:25%; top: 13%;}
     
     /*site03*/
     .sec3 .tbox03 .tbox_info{width:90%;}
@@ -1125,23 +1224,21 @@ input, textarea{
     .sec3 .ibox03_con{height:25%; top: 4%;}
     /*site04*/
     .sec3 .tbox04{width:100%; left: 0%;}
-    .sec3 .tbox04 ul{width: 90%; left: 5%; top: 57%; transform: translateX(0);}
+    .sec3 .tbox04 ul{width: 90%; left: 5%; top: 61%; transform: translateX(0);}
     .sec3 .tbox04 .tbox_tit span{display:none;}
     .sec3 .tbox04 .tbox_info{width:90%; text-align: left; margin-left:5%;}
     .sec3 .tbox04 .tool{width: 100%; margin-left:0;}
 
     .sec3 .ibox04{width: 90%;}
-    .sec3 .ibox04_con{height:30%; top: 4%;}
+    .sec3 .ibox04_con{height:30%; top: 14%;}
     
-    #section4{height: 300vh;}
     .sec4 .skill_tit{height: 60vh;}
     .sec4 .skill_tit h4{top: 6%;}
     
     .sec4 .skill_box .skill{height: 40vh; line-height: 40vh;}
     .sec4 .skill_box .skill>span{font-size: 10vw;}
     
-    #section5{height:180vh;}
-    .sec5{height:180vh; padding-top: 8vw;}
+    .sec5{padding-top: 8vw;}
     .sec5 h5{margin-bottom:6vw;}
 
     .sec5 .ani_wrap{
@@ -1154,18 +1251,15 @@ input, textarea{
         line-height: 3vw;
     }
     
-    
-    
-    .sec7{top: 60%;}
-    .sec7 h6{font-size: 8vw;}
-    .sec7 h6::after{font-size: 3vw; top: 110%;}
 
-    
-       
+    .sec7 h6 span{display: block; line-height: 30px;}
+
 }
 
 
 @media(max-width:960px){
+    .menu_list ul{width: 80%;}
+    
     .sec1 .main{width: 100vw;}
     .sec1 .main h1{
         left: 50%; top: 85%;
@@ -1181,88 +1275,151 @@ input, textarea{
     } */
     .sec2 .profile_box1 .profile_txt br{display: none;}
     .sec2 .profile_box1 .profile_txt span:first-child br{display:block;}
+    .sec2 .profile_box1 .profile_txt span:nth-child(4) br{display:block;}
     .sec2 .profile_box1 .profile_txt span:nth-child(6) br{display: block;}
     
-    #section5{height:160vh;}
-    .sec5{height:160vh; }
+    .sec6 .js_wrap .js_prev{
+        position: absolute; top: 90%; left:50%;
+        transform: translateX(-100%);
+    }
+    .sec6 .js_wrap .js_next{
+        position: absolute; top: 90%; left:50%;
+        transform: translateX(0);
+    }
+
+    .sec6 .js_wrap .js_game .js_txt .game_tit{font-size: 4em;}
+    .sec6 .js_wrap .js_game .js_txt .game_how{font-size: 1.5em;}
+    .sec6 .js_wrap .js_game .js_txt .game_info{font-size: 1.2em;}
+    
+    .sec6 .js_wrap .js_game .js_txt .game_how::after{display: none;}
+    
+
+
 }
 
 @media(max-width:768px){
     .sec1 .main_img .main_circle{width: 20%; bottom:-27%;}
-    .sec3 .project_tit h3{opacity: 0;}
-    .sec3 .project_tit h3 p{}
-    .sec3 .project_tit h3::before{font-size: 2vw; top:-5vw;}
+    .sec3 .project_tit h3{font-size: 24vw;}
+    .sec3 .project_tit h3 p{display: none;}
+    .sec3 .project_tit h3::before{font-size: 4vw; top:-10vw;}
     .sec3 .tbox ul{top: 45%;}
     .sec3 .ibox01_con{top: 4%;}
-
     
-    .sec7 h6{line-height: 8vw;}
-    .sec7 h6 span{display: block;}
-    .sec7 h6::after{
-        top: 110%; left: 50%;
-        transform: translateX(-50%);
-    }
-      
-    .mail_box{width: 60%; top: 55%;}
-    .sec7 #mail{height: 5vw;}
-    .sec7 #message{height: 20vw; margin-top: 5%;}
-      
+    .sec6 .js_wrap .js_game{display:block;}
+    .sec6 .js_wrap .js_game .js_img{width: 100%;}
+    .sec6 .js_wrap .js_game .js_txt{opacity: 0;}
+    .sec6 .js_wrap .js_game .js_txt ul {width: 90%;}
+
+    .js_title{font-size: 15vw;}
+    .js_clock_wrap{margin-left:15%;}
+    .js_form input{width:85%;}
 }
 @media(max-width:640px){
-    
+     
     .sec3 .site{height: 80vh;}
     .sec3 .site_w{width: 100%; height: 100vh; margin-left:0;}
-    .sec3 .project_site0{height:10vh;}
-    .sec3 .project_site00{height: 10vh;}
+
 
     .sec3 .tbox ul{top:50%; left:50%;}
-    .sec3 .tbox .tbox_tit p{display: inline; margin-left: 1.5vw;}
+    .sec3 .tbox .tbox_tit p{margin-left: 1.5vw;}
     .sec3 .tbox .tbox_info{width: 80%; margin-left: 10%;}
     .sec3 .tool{display:none;}
     .sec3 .tbox .tbox_btn{width: 18vw; height: 8vw; top: 100%; left: 70%;}
     .sec3 .tbox .tbox_btn a{font-size: 2vw; line-height: 8.5vw;}
         
-    .sec3 .ibox{width: 100%; left: 7%;}
+    .sec3 .ibox{width: 100%; height: 100%; left: 7%; right:0;}
     
     .sec3 .tbox02 ul{left:1%;}
     .sec3 .tbox02 .tbox_tit{margin-left:0;}
     .sec3 .tbox02 .tbox_info{margin-left: 15%;}
     .sec3 .tbox02 .tbox_btn{left:75%;}
-    .sec3 .ibox02{left:-7%;}
-    
+    .sec3 .ibox02{top: 0; left:-6%;}
+
     .sec3 .tbox04 ul{left:0%;}
     .sec3 .tbox04 .tbox_tit{margin-left:8%;}
     .sec3 .tbox04 .tbox_info{margin-left:15%;}
     .sec3 .tbox04 .tbox_btn{left:75%;}
     .sec3 .ibox04{left:-7%;}
+    .sec3 .ibox04_con{height:20%; top: 12%;}
     
-    #section4{height: 200vh;}
+
     .sec4 .skill_tit{height: 50vh;}
+    .sec4 .skill_tit h4{font-size: 15vw;}
+    .sec4 .skill_tit h4::after{
+        width: 2vw; height: 2vw;
+        top: 28%; left: 82.3%;
+    }
     .sec4 .skill_box .skill{height:30vh;}
+    .sec4 .skill_box .skill>span{font-size: 12vw;} 
+    .sec4 .skill_box .skill strong{top: 50%; font-size: 5vw;}
+
+    .sec4 .skill_box .skill strong span{
+        font-size: 1.8vw;
+        line-height: 2vw;
+        top:-1vw; left: 6vw;
+    }
+    .sec4 .skill_box .skill strong span p{width: 15vw;}
     
-     
-    #section5{height: 250vh;}
+
     .sec5 .ani_wrap{
         grid-template-columns:repeat(1,1fr);
         grid-template-rows:repeat(6,1fr);
     }
-    .sec5 .ani_wrap .ani{width: 80%; min-height:300px; margin-left: 10%;}
+
+    .sec5 .ani_wrap .ani{width: 80vw; height:80vw; margin-top: 5%;}
+    .sec5 .ani_wrap .ani .ani_txt{line-height: 5vw;}
+    .sec5 .ani_wrap .ani .ani_btn{line-height: 3vw;}
+    .sec5 .ani_wrap .ani:hover .ani_txt .ani_code{
+        height:4vw;
+        font-size:2vw;
+        line-height: 4vw;
+    }
     
-    .mail_box{top: 45%;}
+    .sec5 h5::before{font-size: 2vw;}
+    .sec6 h5::before{font-size: 2vw;}
+    
+
+
+}
+
+@media(max-width:480px){
+    
+    
+    .sec3 .project_tit h3{font-size: 30vw;}
+    .sec3 .project_tit h3 P{display:none;}
+    .sec3 .project_tit h3::before{font-size: 5vw; top:-13vw;}
+    
+    .sec3 .site_w{margin-top:0;}
+    .sec3 .tbox ul{width: 96%;}
+    .sec3 .tbox .tbox_tit {font-size: 17vw; margin-left:5%; margin-top:5%; text-align:left;}
+    .sec3 .tbox .tbox_tit p{display:none;}
+    .sec3 .tbox .tbox_info{width: 90%; margin-left:5%;}
+    .sec3 .tbox .tbox_btn{left: 75%;}
+    
+    .sec3 .ibox{left: 0; margin-top: 15%; transform: scale(1); transform-origin: center;}
+    
+    .sec3 .tbox02 .tbox_tit em{display: none;}
+    .sec3 .ibox02_con{height:20%; top: 10%;}
+    .sec3 .ibox04_con{height:20%; top: 10%;}
+    
+}
+@media(max-width:350px){
+
+    .sec2 .profile{height:100vh;}
+    
+    .sec3 .tbox ul{top:42%;}
+    
+
+    .sec4 .skill_tit{height:30vh;}
+    .sec4 .skill_box .skill{height:20vh;}
+    .sec4 .skill_box .skill strong{display: none;}
+
 }
 
 
-@media(max-width:560px){
-    .sec1{height: 80vh;}
-    .sec2{height: 120vh;}
+@media(max-width:320px){
+    
 }
-
-
-
-
-
-
-
 
 
 

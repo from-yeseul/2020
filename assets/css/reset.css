@@ -55,7 +55,7 @@ ul,li,ol {list-style: none;}
 h1,h2,h3,h4,h5,h6,strong {font-size: 16px; font-weight: normal;}
 
 /*버튼초기화*/
-button{border: 0;}
+button{border: 0; background:rgba(0,0,0,0);}
 
 /*input초기화*/
 input {
@@ -73,6 +73,7 @@ img {width: 100%; vertical-align: top;}
 .clearfix:before, .clearfix:after{display: block;content:'';line-height:0;}
 .clearfix:after{clear:both;}
 
+dialog::backdrop{background:rgba(0,0,0,0);}
 
 
 /* IR 효과 */
